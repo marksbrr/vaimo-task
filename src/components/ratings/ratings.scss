@@ -1,0 +1,34 @@
+.review-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 3vh;
+  border-bottom: 1px solid #E6E7EB;
+  padding-bottom: 10px;
+  font-size: 12px;
+}
+
+.buyers-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+
+.star-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+
+.txt-buyers {
+  color: #333333;
+}
+
+.star-icon {
+  width: 16px;
+  margin-right: 4px;
+}

@@ -1,0 +1,37 @@
+.trade-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    font-size: 12px;
+    background-color: #fff;
+}
+
+.trade-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+}
+
+.trademark-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.trade-txt {
+    color: #999999;
+    font-weight: bold;
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.lock-logo {
+    margin-right: 6px;
+}
+
+.payment-logo {
+    height: 18px;
+    padding: 2px;
+}

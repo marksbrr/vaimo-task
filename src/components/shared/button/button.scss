@@ -1,0 +1,32 @@
+.btn-ready {
+    color: #fff;
+    background: rgb(255, 117, 39);
+    background: linear-gradient(90deg, rgba(255, 117, 39, 1) 0%, rgba(255, 117, 39, 1) 44%, rgba(245, 81, 95, 1) 100%);
+    border: none;
+    border-radius: 2px 0 0 2px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.btn-stock-dispatch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #FFF0E6;
+    color: #FF6600;
+    border: none;
+    border-radius: 2px 0 0 2px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.btn-hotsaleproducts {
+    background-color: #EDF0F3;
+    color: #999999;
+    border: none;
+    border-radius: 2px;
+    padding: 4px 8px;
+    float: right;
+    font-size: 14px;
+}

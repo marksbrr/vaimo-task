@@ -1,0 +1,25 @@
+.discount-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    font-size: 14px;
+}
+
+.clock-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-txt {
+    font-style: italic;
+    color: #999999;
+}
+
+.clock-icon {
+    margin-right: 8px;
+}
