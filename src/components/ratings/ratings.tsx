@@ -1,6 +1,4 @@
-import {
-  FC, JSXElementConstructor, useEffect, useState,
-} from 'react';
+import { FC } from 'react';
 import Star from '../../assets/icons8-star_filled.png';
 import './ratings.scss';
 
