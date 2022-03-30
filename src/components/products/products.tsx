@@ -1,18 +1,18 @@
 import { FC, useState } from 'react';
-import Button from '../shared/button/button';
 import './products.scss';
-import Plus from '../../assets/icons8-plus_math.png';
-import Minus from '../../assets/icons8-minus.png';
-import NumberInput from '../shared/number-input/number-input';
+import ProductCounter from '../shared/product-counter/product-counter';
+import ProductCounter2 from '../shared/product-counter/product-counter2/product-counter2';
+import ProductCounter3 from '../shared/product-counter/product-counter3/product-counter3';
 
 type ProductType = {
   title1080P?: string;
   currencySymbol?: string;
-  price1080P?: number;
+  price1080P?: any;
   title4K?: string;
-  price4K?: number;
+  price4K?: any;
   titleBattery?: string;
-  priceBattery?: number;
+  priceBattery?: any;
+  totalHandler?: () => void;
 }
 
 const Products:FC<ProductType> = ({
@@ -24,7 +24,21 @@ const Products:FC<ProductType> = ({
   titleBattery,
   priceBattery,
 }) => {
-  const a = 5;
+  const [quantity, setQuantity] = useState<number>();
+  const [quantity2, setQuantity2] = useState<number>();
+  const [quantity3, setQuantity3] = useState<number>();
+
+  const getQuantity = (num: number) => {
+    setQuantity(num);
+  };
+
+  const getQuantity2 = (num: number) => {
+    setQuantity2(num);
+  };
+
+  const getQuantity3 = (num: number) => {
+    setQuantity3(num);
+  };
 
   return (
     <div className="product-container">
@@ -36,19 +50,10 @@ const Products:FC<ProductType> = ({
         </div>
         <div className="product-btn-wrapper">
           <div className="currency-wrapper">
-            {`${currencySymbol} ${price1080P}`}
+            {`${currencySymbol} ${!quantity ? price1080P : (quantity * price1080P).toFixed(2)}`}
           </div>
-          <Button
-            imgSrc={Minus}
-            className="minus-square"
-          />
-          <NumberInput
-            inputHandler={() => {}}
-            className="grey-square align-center txt-grey"
-          />
-          <Button
-            imgSrc={Plus}
-            className="plus-square"
+          <ProductCounter
+            getQuantity={getQuantity}
           />
         </div>
       </div>
@@ -61,45 +66,31 @@ const Products:FC<ProductType> = ({
         </div>
         <div className="product-btn-wrapper">
           <div className="currency-wrapper">
-            {`${currencySymbol} ${price4K}`}
+            {`${currencySymbol} ${!quantity2 ? price4K : (quantity2 * price4K).toFixed(2)}`}
           </div>
-          <Button
-            imgSrc={Minus}
-            className="minus-square"
+
+          <ProductCounter2
+            getQuantity2={getQuantity2}
           />
-          <NumberInput
-            inputHandler={() => {}}
-            className="grey-square align-center txt-grey"
-          />
-          <Button
-            imgSrc={Plus}
-            className="plus-square"
-          />
+
         </div>
       </div>
 
       <div className="product-wrapper">
         <div className="product-selection">
           <div>
-            {(titleBattery)}
+            {(titleBattery ?? '')}
           </div>
         </div>
         <div className="product-btn-wrapper">
           <div className="currency-wrapper">
-            {`${currencySymbol} ${priceBattery?.toFixed(2)}`}
+            {`${currencySymbol} ${!quantity3 ? (priceBattery) : (quantity3 * priceBattery).toFixed(2)}`}
           </div>
-          <Button
-            imgSrc={Minus}
-            className="minus-square"
+
+          <ProductCounter3
+            getQuantity3={getQuantity3}
           />
-          <NumberInput
-            inputHandler={() => {}}
-            className="grey-square align-center txt-grey"
-          />
-          <Button
-            imgSrc={Plus}
-            className="plus-square"
-          />
+
         </div>
       </div>
 

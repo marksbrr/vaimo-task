@@ -1,5 +1,4 @@
 type ItemTypes =
-
 {
   'success': number,
   'product': {

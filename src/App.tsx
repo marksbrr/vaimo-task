@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import './App.scss';
-import ItemTypes from './data/types';
+import axios from 'axios';
+import ItemTypes from './data/data';
 import Arrow from './assets/icons8-forward.png';
 import Drone from './assets/Drone.jpg';
 import Logo from './assets/Logo.png';
@@ -16,11 +16,19 @@ const App = () => {
   const [item, setItem] = useState<ItemTypes>();
 
   useEffect(() => {
-    axios.get('https://fe-assignment.vaimo.net/').then((res) => {
-      setItem(res.data);
-      // todo-add failure handling
-      // todo-redo all classes according to bem
-    });
+    axios
+      .get('https://fe-assignment.vaimo.net/')
+      // eslint-disable-next-line consistent-return
+      .then((res) => {
+        if (res.data.success === 1) {
+          return setItem(res.data);
+        }
+      })
+      .then(() => {
+      })
+      .catch((error) => {
+        console.log(error.response.data.error);
+      });
   }, []);
 
   const product = item?.product;
@@ -33,7 +41,7 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <div className="main-wrapper">
+      <div className="main-inner-container">
         <div className="image-wrapper">
           <img src={Drone} alt="drone" className="drone-image" />
         </div>
@@ -95,6 +103,7 @@ const App = () => {
             currencySymbol={options?.battery_accessories.price.currency.symbol}
             leadTimeInfo={shipping?.lead_time.info}
             shippingInfo={shipping?.method.shipping_time.info}
+            totalCost={product?.shipping.method.cost.value}
           />
         </div>
       </div>

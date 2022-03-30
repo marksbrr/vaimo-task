@@ -19,10 +19,10 @@ const Ratings:FC<RatingType> = ({
   <div className="review-container">
     <div className="star-wrapper">
       <span>
-        {[...Array(parseInt(reviewRating || '1', 10))].map((num) => (
+        {[...Array(parseInt(reviewRating || '1', 10))].map(() => (
           <img
             src={Star}
-            key={num}
+            key={Math.random()}
             alt="star"
             className="star-icon"
           />

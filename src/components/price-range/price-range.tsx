@@ -28,7 +28,7 @@ const PriceRange:FC<PriceRangeType> = ({
         <div className="option-wrapper">
           <div className="txt-grey">/ Option</div>
           <div className="txt-splitter"> | </div>
-          <div>2 Options</div>
+          <div className="txt-options">2 Options</div>
           <div className="txt-grey">  (Min.Order) </div>
         </div>
       </div>
