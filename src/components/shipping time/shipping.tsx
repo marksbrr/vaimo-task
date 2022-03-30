@@ -26,6 +26,7 @@ const Shipping:FC<ShippingType> = ({
   totalCost,
 }) => {
   const numberWithCommas = (num: number) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
   return (
     <div className="shipping-container">
       <div className="shipping-wrapper">
