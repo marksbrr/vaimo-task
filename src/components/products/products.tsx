@@ -69,8 +69,8 @@ const Products:FC<ProductType> = ({
             {`${currencySymbol} ${!quantity2 ? price4K : (quantity2 * price4K).toFixed(2)}`}
           </div>
 
-          <ProductCounter2
-            getQuantity2={getQuantity2}
+          <ProductCounter
+            getQuantity={getQuantity2}
           />
 
         </div>
@@ -87,8 +87,8 @@ const Products:FC<ProductType> = ({
             {`${currencySymbol} ${!quantity3 ? (priceBattery) : (quantity3 * priceBattery).toFixed(2)}`}
           </div>
 
-          <ProductCounter3
-            getQuantity3={getQuantity3}
+          <ProductCounter
+            getQuantity={getQuantity3}
           />
 
         </div>
