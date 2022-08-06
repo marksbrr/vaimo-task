@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import './shipping.scss';
+import AmountHelper from '../../scripts/AmountHelper';
 import InfoIcon from '../../assets/icons8-info.png';
 import EnvelopeIcon from '../../assets/icons8-envelope.png';
 import Button from '../shared/button/button';
@@ -12,7 +13,6 @@ type ShippingType = {
   currencySymbol?: string;
   leadTimeInfo?: string;
   shippingInfo?: string;
-  totalCost?: number | undefined;
 }
 
 const Shipping:FC<ShippingType> = ({
@@ -23,7 +23,6 @@ const Shipping:FC<ShippingType> = ({
   currencySymbol,
   leadTimeInfo,
   shippingInfo,
-  totalCost,
 }) => {
   const numberWithCommas = (num: number) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -35,7 +34,7 @@ const Shipping:FC<ShippingType> = ({
             {`Ship to ${shippingCountry} by ${shippingMethod}`}
           </div>
           <div className="total-wrapper">
-            {`${currencySymbol} ${!totalCost ? '' : (numberWithCommas(+totalCost.toFixed(2)))}`}
+            {`${currencySymbol} ${!AmountHelper.totalAmount ? '0.00' : (numberWithCommas(+AmountHelper.totalAmount.toFixed(2)))}`}
           </div>
         </div>
         <div className="leadtime-wrapper txt-grey">
