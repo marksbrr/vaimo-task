@@ -32,17 +32,11 @@ const ProductCounter: FC<Props> = ({ getQuantity }) => {
       <Button
         imgSrc={Minus}
         className={inputValue > 0 ? 'plus-square ml-8' : 'minus-square ml-8 disabled'}
-<<<<<<< HEAD
         onClick={
           () => {
             decreaseValue();
           }
 }
-=======
-        onClick={() => {
-          decreaseValue();
-        }}
->>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
       />
       <input
         id="number-input"

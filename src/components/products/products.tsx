@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable camelcase */
 import { FC } from 'react';
 import './products.scss';
 import Product from './product';
@@ -17,4 +19,4 @@ const Products:FC<ProductType> = ({
   </div>
 );
 
-export default Products
+export default Products;

@@ -13,7 +13,6 @@ type ShippingType = {
   currencySymbol?: string;
   leadTimeInfo?: string;
   shippingInfo?: string;
-  totalCost?: number | undefined;
 }
 
 const Shipping:FC<ShippingType> = ({
@@ -24,10 +23,6 @@ const Shipping:FC<ShippingType> = ({
   currencySymbol,
   leadTimeInfo,
   shippingInfo,
-<<<<<<< HEAD
-=======
-  totalCost,
->>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
 }) => {
   const numberWithCommas = (num: number) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
@@ -39,11 +34,7 @@ const Shipping:FC<ShippingType> = ({
             {`Ship to ${shippingCountry} by ${shippingMethod}`}
           </div>
           <div className="total-wrapper">
-<<<<<<< HEAD
             {`${currencySymbol} ${!AmountHelper.totalAmount ? '0.00' : (numberWithCommas(+AmountHelper.totalAmount.toFixed(2)))}`}
-=======
-            {`${currencySymbol} ${!totalCost ? '' : (numberWithCommas(+totalCost.toFixed(2)))}`}
->>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
           </div>
         </div>
         <div className="leadtime-wrapper txt-grey">
