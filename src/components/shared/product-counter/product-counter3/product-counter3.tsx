@@ -1,20 +1,20 @@
 import { FC, useEffect, useState } from 'react';
-import Button from '../button/button';
-import Plus from '../../../assets/icons8-plus_math.png';
-import Minus from '../../../assets/icons8-minus.png';
+import Button from '../../button/button';
+import Plus from '../../../../assets/icons8-plus_math.png';
+import Minus from '../../../../assets/icons8-minus.png';
 
 interface Props {
   className?: string;
-  getQuantity: (num: number) => void;
+  getQuantity3: (num: number) => void;
 }
 
-const ProductCounter: FC<Props> = ({ getQuantity }) => {
+const ProductCounter3: FC<Props> = ({ getQuantity3 }) => {
   const [inputValue, setInputValue] = useState(0);
 
   const increaseValue = () => {
     const newValue = inputValue + 1;
     setInputValue(newValue);
-    getQuantity(inputValue);
+    getQuantity3(inputValue);
   };
 
   const decreaseValue = () => {
@@ -24,7 +24,7 @@ const ProductCounter: FC<Props> = ({ getQuantity }) => {
   };
 
   useEffect(() => {
-    getQuantity(inputValue);
+    getQuantity3(inputValue);
   }, [inputValue]);
 
   return (
@@ -32,17 +32,9 @@ const ProductCounter: FC<Props> = ({ getQuantity }) => {
       <Button
         imgSrc={Minus}
         className={inputValue > 0 ? 'plus-square ml-8' : 'minus-square ml-8 disabled'}
-<<<<<<< HEAD
-        onClick={
-          () => {
-            decreaseValue();
-          }
-}
-=======
         onClick={() => {
           decreaseValue();
         }}
->>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
       />
       <input
         id="number-input"
@@ -60,4 +52,4 @@ const ProductCounter: FC<Props> = ({ getQuantity }) => {
   );
 };
 
-export default ProductCounter;
+export default ProductCounter3;

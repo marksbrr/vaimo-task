@@ -37,6 +37,8 @@ const App = () => {
 
   const reviews = item?.product.reviews;
 
+  const batteryPrice = item?.product.options.battery_accessories.price.value;
+
   return (
     <>
       {(isLoading)
@@ -86,8 +88,18 @@ const App = () => {
                   discountEndsAt={product?.discount.end_date}
                 />
                 <Products
+<<<<<<< HEAD
                   currencySymbol={options?.battery_accessories.price.currency.symbol}
                   options={options}
+=======
+                  title1080P={options?.['1080p'].label}
+                  price1080P={options?.['1080p'].price.value}
+                  title4K={options?.['4k'].label}
+                  price4K={options?.['4k'].price.value}
+                  titleBattery={options?.battery_accessories.label}
+                  priceBattery={batteryPrice?.toFixed(2)}
+                  currencySymbol={options?.battery_accessories.price.currency.symbol}
+>>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
                 />
                 <TradeAssurance />
               </div>
@@ -100,6 +112,10 @@ const App = () => {
                   currencySymbol={options?.battery_accessories.price.currency.symbol}
                   leadTimeInfo={shipping?.lead_time.info}
                   shippingInfo={shipping?.method.shipping_time.info}
+<<<<<<< HEAD
+=======
+                  totalCost={product?.shipping.method.cost.value}
+>>>>>>> 93c04e44a85d39aef3d639684f7ca6048550b579
                 />
               </div>
             </div>
