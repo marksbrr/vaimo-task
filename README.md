@@ -1,8 +1,4 @@
-![pageGIF](./public/GIF/vaimo-task.gif)
-
-<a href="https://wondrous-bavarois-44a0de.netlify.app/">Click here</a> to view it in the browser.
-- The entry point for the project is in App.tsx file
-- You can see find a responsive design made to adapt to different screen sizes
+In the project directory, you can run:
 
 ### `npm run install` + `npm start`
 
