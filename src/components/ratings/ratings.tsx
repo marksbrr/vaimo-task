@@ -1,6 +1,4 @@
-import {
-  FC, JSXElementConstructor, useEffect, useState,
-} from 'react';
+import { FC } from 'react';
 import Star from '../../assets/icons8-star_filled.png';
 import './ratings.scss';
 
@@ -19,10 +17,10 @@ const Ratings:FC<RatingType> = ({
   <div className="review-container">
     <div className="star-wrapper">
       <span>
-        {[...Array(parseInt(reviewRating || '1', 10))].map((num) => (
+        {[...Array(parseInt(reviewRating || '1', 10))].map(() => (
           <img
             src={Star}
-            key={num}
+            key={Math.random()}
             alt="star"
             className="star-icon"
           />

@@ -45,11 +45,6 @@
     font-weight: bold;
 }
 
-
-// .txt-leadtime::first-line {
-//     font-weight: bold;
-// }
-
 .info-icon {
     width: 15px;
     height: 14px;
@@ -123,7 +118,7 @@
     content: attr(data-hover);
     visibility: hidden;
     opacity: 0;
-    width: 140px;
+    width: 200px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -133,7 +128,7 @@
 
     position: absolute;
     z-index: 0;
-    left: 50%;
+    right: 20%;
     top: 110%;
 }
 
@@ -160,7 +155,7 @@
 
     position: absolute;
     z-index: 2;
-    left: 0;
+    right: 20%;
     top: 110%;
 }
 

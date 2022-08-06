@@ -40,7 +40,6 @@ const DiscountTimer:FC<DiscountType> = ({ discountAmount, discountEndsAt }) => {
           <span className="txt-grey">Discount ends in</span>
         </span>
       </div>
-      <div className="txt-grey" />
       <div className="clock-wrapper clock-txt">
         <img src={ClockIcon} alt="clock-icon" className="clock-icon" />
         {currentTime}
